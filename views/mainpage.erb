@@ -1,0 +1,16 @@
+	<center>
+	<font size="6"> Welcome, <%=@user.fname%> <%=@user.lname%> </font>
+	<br>
+	<br>
+	<form method="POST" action="/mainpage">
+		<label for="username"><font size="4">Leave Your Comment Here</font></label>
+		<input type="text" name="username">
+		<input type="submit">
+	</form>
+	<br>
+	<font size="5">
+	<%@user.posts.each do |post| %>
+	<%=post.text%>
+	<%end%>
+	</font>
+	</center>
